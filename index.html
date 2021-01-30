@@ -7,7 +7,7 @@
 </head>
 <body>
     <div id="time">00:00:00.000</div>
-    
+
     <div>
         <input id="start" type="button" value="start">
         <input id="stop" type="button" value="stop">
@@ -15,7 +15,13 @@
     </div>
 
     <script>
+        // htmlの要素を取得
+        const timeElement = document.getElementById('time');
+        const start = document.getElementById('start');
+        const stop = document.getElementById('stop');
+        const reset = document.getElementById('reset');
 
+        console.log(timeElement);
     </script>
 </body>
 </html>
