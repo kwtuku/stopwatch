@@ -21,7 +21,25 @@
         const stop = document.getElementById('stop');
         const reset = document.getElementById('reset');
 
-        console.log(timeElement);
+        // start.addEventListener('click', () => {
+        //     console.log("clicked!");
+        // });
+
+        // 経過時間を定義
+        let elapsed = 0;
+
+        // startをクリックすると実行されるメソッド
+        start.addEventListener('click', function(e) {
+            // Dateオブジェクトを生成
+            let pre = new Date();
+            // 一定ミリ秒後ごとに特定の処理を繰り返し実行
+            setInterval(function() {
+                const now = new Date();
+                elapsed += now - pre; 
+                pre = now;
+                console.log(elapsed);
+            }, 10);
+        });
     </script>
 </body>
 </html>
