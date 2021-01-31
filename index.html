@@ -28,18 +28,27 @@
         // 経過時間を定義
         let elapsed = 0;
 
+        let intervalId = null;
+
         // startをクリックすると実行されるメソッド
         start.addEventListener('click', function(e) {
             // Dateオブジェクトを生成
             let pre = new Date();
             // 一定ミリ秒後ごとに特定の処理を繰り返し実行
-            setInterval(function() {
+            intervalId = setInterval(function() {
                 const now = new Date();
                 elapsed += now - pre; 
                 pre = now;
                 console.log(elapsed);
             }, 10);
         });
+
+        // stopをクリックすると実行されるメソッド
+        stop.addEventListener('click', function(e) {
+            // setIntervalの繰り返し動作をキャンセル
+            clearInterval(intervalId);
+        });
+
     </script>
 </body>
 </html>
