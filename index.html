@@ -82,6 +82,8 @@
         reset.addEventListener('click', function(e) {
             elapsed = 0;
             clearInterval(intervalId);
+            updateTime();
+            intervalId = null;
         });
 
     </script>
