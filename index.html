@@ -47,6 +47,10 @@
             // const hStr = H.toString();
 
             console.log(H, M, S, MS);
+
+            // HTML内の文字列を動的に変更
+            // timeElement.innerHTML = `${hStr}:${mStr}:${sStr}.${msStr}`;
+            timeElement.innerHTML = `${H}:${M}:${S}.${MS}`;
         }
 
         let intervalId = null;
