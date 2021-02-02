@@ -30,6 +30,7 @@
 
         function updateTime() {
             const ms = elapsed % 1000;
+            // Math.floor 与えられた数値以下の最大の整数を返す
             const s = Math.floor(elapsed / 1000) % 60;
             const m = Math.floor(elapsed / (1000*60)) % 60;
             const h = Math.floor(elapsed / (1000*60*60));
