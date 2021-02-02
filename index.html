@@ -57,6 +57,8 @@
 
         // startをクリックすると実行されるメソッド
         start.addEventListener('click', function(e) {
+            // intervalIdがnullでないときsetIntervalを実行しない
+            if (intervalId !== null) {return;}
             // Dateオブジェクトを生成
             let pre = new Date();
             // 一定ミリ秒後ごとに特定の処理を繰り返し実行
@@ -73,6 +75,7 @@
         stop.addEventListener('click', function(e) {
             // setIntervalの繰り返し動作をキャンセル
             clearInterval(intervalId);
+            intervalId = null;
         });
 
         // resetをクリックすると実行されるメソッド
